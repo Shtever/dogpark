@@ -1,17 +1,10 @@
 def main():
   try:
-    owners = open('owners.txt', 'r')      #open file as read-only
+    found = False
+    search = input('please enter owner\'s name: ')
+    owners = open('owners.txt', 'r')
     record = owners.readline()
-    record = record.rstrip('\n')
-    print(record)
-    record_input = input('please enter owner\'s name: ')
-    if record.upper() != record_input.upper():
-      print('no match')
-      for x in range(3):
-        x = owners.readline()
-    elif record.upper() == record_input.upper():
-      print('Match')
-      #assign variables (it moves to the next line after every 'readline')
+    while record != '':
       dog = owners.readline()
       breed = owners.readline()
       notes = owners.readline()
@@ -20,13 +13,13 @@ def main():
       dog = dog.rstrip('\n')
       breed = breed.rstrip('\n')
       notes = notes.rstrip('\n')
-      #print each line of data with the specified seperator
-      print(record,dog,breed,notes, sep='  -  ')
+      if record.upper() == search.upper():
+        print('match')
+        print(record,dog,breed,notes, sep='  -  ')
+        found = True
       record = owners.readline()
 
-
-
-     #ERROR HANDLERS
+           #ERROR HANDLERS
   except IOError:         #IOError
         print('Reference does not exist')
   except ValueError:      #ValueError
@@ -35,5 +28,3 @@ def main():
         print('An error occured.')
   else:
     owners.close()      #close file
-
-main()

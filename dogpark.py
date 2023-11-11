@@ -2,18 +2,20 @@
 #owner/dog information. Built for my mom.
 #Copyright Steve McMillen 2023
 
-import read, write
+import read, write, search
 
 def main():
     try:
-        answer = input('Do you want to (r)ead or (a)dd to list? ')
-        if  answer == 'r':
+        answer = input('Do you want to (r)ead, (s)earch or (a)dd to list? ')
+        if  answer.upper() == 'R':
             read.main()
-        elif answer =='a':
+        elif answer.upper() =='A':
             write.main()
             print('Your entry has been made successfully')
             print()
             read.main()
+        elif answer.upper() =='S':
+            search.main()
         else:
             print('please enter either \'r\' or \'a\'')
             main()
@@ -25,6 +27,10 @@ def main():
         print('Please enter a number.')
     except:                 #Other error
         print('An error occured.')
+    finally:
+        print('___________________________________________')
+        print()
+        main()
 
 main()
 
