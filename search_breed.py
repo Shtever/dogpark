@@ -1,7 +1,11 @@
+#This program runs in conjustction with dogpark main program.
+#This module is used to search for dog's breed
+#Copyright Steve McMillen 2023
+
 def main():
   try:
     found = False
-    search = input('please enter owner\'s name: ')
+    search = input('please enter dog\'s breed: ')
     owners = open('owners.txt', 'r')
     record = owners.readline()
     while record != '':
@@ -13,7 +17,7 @@ def main():
       dog = dog.rstrip('\n')
       breed = breed.rstrip('\n')
       notes = notes.rstrip('\n')
-      if record.upper() == search.upper():
+      if breed.upper() == search.upper():
         print('match')
         print(record,dog,breed,notes, sep='  -  ')
         found = True

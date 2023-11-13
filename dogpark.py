@@ -2,7 +2,7 @@
 #owner/dog information. Built for my mom.
 #Copyright Steve McMillen 2023
 
-import read, write, search
+import read, write, search_owner, search_dog, search_breed, search_notes
 
 def main():
     try:
@@ -15,9 +15,21 @@ def main():
             print()
             read.main()
         elif answer.upper() =='S':
-            search.main()
+            print('Which do you want to search for?')
+            term = input('(o)wner, (d)og name, (b)reed, or (n)otes? ')
+            if term.upper() == 'O':
+                search_owner.main()
+            elif term.upper() == 'D':
+                search_dog.main()
+            elif term.upper() == 'B':
+                search_breed.main()
+            elif term.upper() == 'N':
+                search_notes.main()
+            else:
+                print('Incorrect entry. Starting over')
+                main()            
         else:
-            print('please enter either \'r\' or \'a\'')
+            print('please enter either \'r\', \'s\' or \'a\'')
             main()
     
   #ERROR HANDLERS
@@ -33,4 +45,3 @@ def main():
         main()
 
 main()
-

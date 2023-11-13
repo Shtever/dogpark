@@ -1,4 +1,6 @@
-#This program writes owner/dog info into a text file.
+#This program writes (appends) owner/dog info into a text file.
+#To be used in conjunction with the dogpark.py file
+#Copyright Steve McMillen 2023
 
 def main():
   try:

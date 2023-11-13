@@ -1,3 +1,7 @@
+#This program reads owner/dog info into a text file.
+#To be used in conjunction with the dogpark.py file
+#Copyright Steve McMillen 2023
+
 def main():
   try:
     owners = open('owners.txt', 'r')      #open file as read-only
