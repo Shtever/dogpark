@@ -7,7 +7,7 @@ import os #import needed for the remove & rename functions
 def main():
   try:
     found = False                                   #found variable declared
-    search = input('please enter owner\'s name: ')    #search input declared
+    search = input('please enter note term: ')    #search input declared
     owners = open('owners.txt', 'r')            #open owners as read-only
     temp_file = open('temp.txt', 'w')           #open temporary file as write
     record = owners.readline()                #read the line of owners.txt
@@ -25,10 +25,12 @@ def main():
       notes = notes.rstrip('\n')
 
       #if 'record' matches search term
-      if record.upper() == search.upper():
+      if search.upper() in notes.upper():   #If search term is in anywhere notes
         print('match')
-        print(f'{record.upper()} found.')
-        record = input(f'Please enter new owner name')      #input new name
+        print('Search term found!')
+        print(f'{dog.upper()}')
+        print(f'{notes.upper()}')
+        breed = input(f'Please enter new note: ')      #input new name
 
         #write new data to temp_file
         temp_file.write(f'{record}\n')  #name      
@@ -67,3 +69,4 @@ def main():
         print('That name was not found in the file')
 
     
+main()

@@ -1,0 +1,9 @@
+DOGPARK.PY TO DO LIST
+
+1. In search functions: ask user if they want to overwrite or append notes section.
+
+2. Add a timeline of code updates to readme
+
+3. Add import statements to dog park to include all modules.
+
+4. Combine some modules into fewer programs.

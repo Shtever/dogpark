@@ -1,1 +1,2 @@
 # dogpark
+This is a program built in python. Its purpose is to help my mom to remember the names of people she meets at the dog park. Many times she'll remember the dog's name or breed, but not the owner. With this program she can enter owner name, dog name, breed,and other notes. She can also search any of those terms to display all of the information.

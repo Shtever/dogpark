@@ -2,7 +2,9 @@
 #owner/dog information. Built for my mom.
 #Copyright Steve McMillen 2023
 
-import read, write, search_owner, search_dog, search_breed, search_notes
+import read, write
+import search_owner, search_dog, search_breed, search_notes
+import edit_owner, edit_dog, edit_breed, edit_notes
 
 def main():
     try:
