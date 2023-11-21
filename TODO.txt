@@ -6,4 +6,6 @@ DOGPARK.PY TO DO LIST
 
 3. Add import statements to dog park to include all modules.
 
-4. Combine some modules into fewer programs.
+4. Combine some modules into fewer programs - SEARCH and EDIT in particular.
+
+5. In the 'Edit' modules, leave the entry unchanged if user leaves field blank.
