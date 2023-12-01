@@ -1,5 +1,7 @@
 DOGPARK.PY TO DO LIST
 
+0.**** CONVERT LISTS TO .DAT FILES AND REVISE CODE TO USE DICTIONARIES/PICKLING INSTEAD OF WRITE TO FILE.
+
 1. In search functions: ask user if they want to overwrite or append notes section.
 
 2. Add a timeline of code updates to readme
