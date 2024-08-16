@@ -1,6 +1,6 @@
 #This is a program that reads or adds to a text document with
 #owner/dog information. Built for my mom.
-#Copyright Steve McMillen 2023
+#Copyright Steve McMillen 2024
 
 import read, write
 import search_owner, search_dog, search_breed, search_notes

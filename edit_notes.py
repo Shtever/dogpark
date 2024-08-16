@@ -30,7 +30,7 @@ def main():
         print('Search term found!')
         print(f'{dog.upper()}')
         print(f'{notes.upper()}')
-        breed = input(f'Please enter new note: ')      #input new name
+        notes = input(f'Please enter new note: ')      #input new name
 
         #write new data to temp_file
         temp_file.write(f'{record}\n')  #name      
